@@ -77,6 +77,25 @@ button {
   cursor: pointer;
 }
 
+.grid-col-4 {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-col-4 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-col-4 {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .btn,
 .btn-arrow {
   font-size: 1.2rem;
@@ -382,5 +401,82 @@ button {
   .showcase .card .card__content .card__tagline {
     margin-bottom: 4.8rem;
   }
+}
+
+.story {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.story::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+  background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+}
+
+.story:hover {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+
+.story:hover::after {
+  height: 6px;
+}
+
+.story .image-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.66)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.66));
+}
+
+.story img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  display: block;
+}
+
+.story .story__content {
+  width: 82.66%;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #fff;
+}
+
+.story .story__title {
+  margin: 0 0 0.4rem;
+}
+
+.story .story__author {
+  margin: 0 0 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.story .btn-arrow {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.story .btn-arrow .arrow-icon {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */
