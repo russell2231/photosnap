@@ -1,0 +1,92 @@
+.main-header {
+	background: #fff;
+	padding: 2.8rem 0;
+
+	.main-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.nav__toggler {
+			background: url(../../assets/shared/mobile/menu.svg);
+			width: 20px;
+			height: 6px;
+
+			@include tablet {
+				display: none;
+			}
+		}
+
+		.list {
+			display: none;
+			list-style: none;
+			padding: 4.7rem 0 0;
+			margin: 0 0 2rem;
+			flex-direction: column;
+			align-items: center;
+			border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+
+			@include tablet {
+				display: flex;
+				flex-direction: row;
+				border-bottom: none;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.nav__item {
+			margin-bottom: 2rem;
+
+			@include tablet {
+				margin: 0 1.75rem;
+			}
+
+			a {
+				letter-spacing: 2.5px;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: 700;
+				color: #000;
+
+				@include tablet {
+					letter-spacing: 2px;
+					font-size: 1.2rem;
+				}
+
+				&:hover {
+					opacity: 0.3;
+				}
+			}
+		}
+
+		.btn {
+			display: none;
+			padding-top: 1.4rem;
+			padding-bottom: 1.4rem;
+			font-size: 1.5rem;
+			letter-spacing: 2.5px;
+
+			@include tablet {
+				display: inline-block;
+				font-size: 1.2rem;
+				letter-spacing: 2px;
+				padding-top: 1.2rem;
+				padding-bottom: 1.2rem;
+			}
+		}
+	}
+}
+
+.main-nav.expanded {
+	.list {
+		display: flex;
+		width: 100%;
+	}
+
+	.btn {
+		display: block;
+		width: 100%;
+	}
+}

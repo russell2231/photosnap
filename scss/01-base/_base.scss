@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 87.2%;
+	margin: 0 auto;
+
+	@include tablet {
+		width: 89.5%;
+	}
+
+	@include desktop {
+		width: 77%;
+	}
+}
+
+button {
+	cursor: pointer;
+}

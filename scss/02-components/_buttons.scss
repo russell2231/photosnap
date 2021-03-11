@@ -1,0 +1,19 @@
+.btn {
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	font-weight: 700;
+	border: none;
+	text-transform: uppercase;
+}
+
+.btn--dark {
+	color: #fff;
+	background: #000;
+	padding: 1.2rem 2.4rem;
+	transition: background 0.3s;
+
+	&:hover {
+		background: #dfdfdf;
+		color: #000;
+	}
+}
