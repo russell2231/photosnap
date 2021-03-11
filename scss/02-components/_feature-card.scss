@@ -1,0 +1,21 @@
+.features__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5.6rem;
+
+	@include desktop {
+		margin-bottom: 0;
+		width: 31.53%;
+	}
+
+	.features__title {
+		margin: 4.8rem 0 1.6rem;
+	}
+
+	.features__tagline {
+		text-align: center;
+		opacity: 0.6;
+		margin: 0;
+	}
+}

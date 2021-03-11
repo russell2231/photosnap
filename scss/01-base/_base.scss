@@ -30,3 +30,33 @@ button {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
+
+.features-intro {
+	padding: 8rem 0;
+
+	@include tablet {
+		padding: 12rem 0;
+	}
+
+	.container {
+		width: 82.6%;
+
+		@include tablet {
+			width: 59.5%;
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			width: 77.08%;
+		}
+	}
+
+	.features__card:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.features__card:nth-of-type(2) {
+	}
+}
