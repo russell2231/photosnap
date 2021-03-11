@@ -13,7 +13,7 @@ body {
 h1,
 h2.text--large {
   font-size: 3.2rem;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: 3.33px;
   font-weight: 700;
 }
@@ -77,12 +77,33 @@ button {
   cursor: pointer;
 }
 
-.btn {
+.btn,
+.btn-arrow {
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: 700;
   border: none;
   text-transform: uppercase;
+}
+
+.btn-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  padding: 0;
+}
+
+.btn-arrow:hover {
+  text-decoration: underline;
+}
+
+.btn-arrow .arrow-icon {
+  display: inline-block;
+  margin-left: 1.6rem;
 }
 
 .btn--dark {
@@ -96,6 +117,22 @@ button {
 .btn--dark:hover {
   background: #dfdfdf;
   color: #000;
+}
+
+.btn-arrow--light {
+  color: #fff;
+}
+
+.btn-arrow--light .arrow-icon g {
+  stroke: #fff;
+}
+
+.btn-arrow--dark {
+  color: #000;
+}
+
+.btn-arrow--dark .arrow-icon g {
+  stroke: #000;
 }
 
 .main-header {
@@ -206,6 +243,18 @@ button {
   }
 }
 
+.main-nav.expanded {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.main-nav.expanded .nav__toggler {
+  background: url(../../assets/shared/mobile/close.svg) no-repeat;
+  width: 16px;
+  height: 15px;
+}
+
 .main-nav.expanded .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,5 +265,122 @@ button {
 .main-nav.expanded .btn {
   display: block;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .showcase .card:nth-of-type(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card .card__image {
+    width: 35.54%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .showcase .card .card__image {
+    width: 57.63%;
+  }
+}
+
+.showcase .card .card__image img {
+  width: 100%;
+  display: block;
+}
+
+.showcase .card .card__content {
+  background: #fff;
+  padding: 7.2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card .card__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    width: 64.45%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .showcase .card .card__content {
+    width: 42.36%;
+  }
+}
+
+.showcase .card .card__content.main-card {
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+.showcase .card .card__content.main-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 128px;
+  height: 6px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+  background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card .card__content.main-card::before {
+    width: 6px;
+    height: 304px;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+    background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card .card__content .container {
+    width: 78.18%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .showcase .card .card__content .container {
+    width: 63.44%;
+  }
+}
+
+.showcase .card .card__content .card__title {
+  text-transform: uppercase;
+  margin: 0 0 1.6rem;
+}
+
+.showcase .card .card__content .card__tagline {
+  opacity: 0.6;
+  margin: 0 0 2.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .card .card__content .card__tagline {
+    margin-bottom: 4.8rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

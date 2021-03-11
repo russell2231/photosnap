@@ -1,9 +1,26 @@
-.btn {
+.btn,
+.btn-arrow {
 	font-size: 1.2rem;
 	letter-spacing: 2px;
 	font-weight: 700;
 	border: none;
 	text-transform: uppercase;
+}
+
+.btn-arrow {
+	display: flex;
+	align-items: center;
+	background: transparent;
+	padding: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	.arrow-icon {
+		display: inline-block;
+		margin-left: 1.6rem;
+	}
 }
 
 .btn--dark {
@@ -15,5 +32,21 @@
 	&:hover {
 		background: #dfdfdf;
 		color: #000;
+	}
+}
+
+.btn-arrow--light {
+	color: #fff;
+
+	.arrow-icon g {
+		stroke: #fff;
+	}
+}
+
+.btn-arrow--dark {
+	color: #000;
+
+	.arrow-icon g {
+		stroke: #000;
 	}
 }

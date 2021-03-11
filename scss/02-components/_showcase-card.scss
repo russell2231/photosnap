@@ -1,0 +1,90 @@
+.showcase .card {
+	@include tablet {
+		display: flex;
+
+		&:nth-of-type(odd) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.card__image {
+		@include tablet {
+			width: 35.54%;
+		}
+
+		@include desktop {
+			width: 57.63%;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.card__content {
+		background: #fff;
+		padding: 7.2rem 0;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0;
+			width: 64.45%;
+		}
+
+		@include desktop {
+			width: 42.36%;
+		}
+
+		&.main-card {
+			background: #000;
+			color: #fff;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 24px;
+				width: 128px;
+				height: 6px;
+				background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+
+				@include tablet {
+					width: 6px;
+					height: 304px;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+				}
+			}
+		}
+
+		.container {
+			@include tablet {
+				width: 78.18%;
+			}
+
+			@include desktop {
+				width: 63.44%;
+			}
+		}
+
+		.card__title {
+			text-transform: uppercase;
+			margin: 0 0 1.6rem;
+		}
+
+		.card__tagline {
+			opacity: 0.6;
+			margin: 0 0 2.3rem;
+
+			@include tablet {
+				margin-bottom: 4.8rem;
+			}
+		}
+	}
+}

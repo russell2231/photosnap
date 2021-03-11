@@ -80,6 +80,14 @@
 }
 
 .main-nav.expanded {
+	align-items: start;
+
+	.nav__toggler {
+		background: url(../../assets/shared/mobile/close.svg) no-repeat;
+		width: 16px;
+		height: 15px;
+	}
+
 	.list {
 		display: flex;
 		width: 100%;
