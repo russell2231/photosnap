@@ -31,6 +31,25 @@ button {
 	}
 }
 
+.showcase .main-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 24px;
+	width: 128px;
+	height: 6px;
+	background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+
+	@include tablet {
+		width: 6px;
+		height: 304px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+	}
+}
+
 .features-intro {
 	padding: 8rem 0;
 
@@ -56,7 +75,32 @@ button {
 	.features__card:last-of-type {
 		margin-bottom: 0;
 	}
+}
 
-	.features__card:nth-of-type(2) {
+.featured {
+	.card {
+		.card__content {
+			padding: 4.8rem 0;
+		}
+
+		.featured__title {
+			text-transform: uppercase;
+		}
+
+		.featured__info {
+			display: flex;
+
+			.story__date {
+				margin-right: 0.8rem;
+				opacity: 0.75;
+				font-weight: 400;
+				letter-spacing: 0;
+			}
+
+			.story__author {
+				font-weight: 400;
+				letter-spacing: 0;
+			}
+		}
 	}
 }

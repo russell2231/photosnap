@@ -96,6 +96,30 @@ button {
   }
 }
 
+.showcase .main-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 128px;
+  height: 6px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+  background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .main-card::before {
+    width: 6px;
+    height: 304px;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+    background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
+  }
+}
+
 .features-intro {
   padding: 8rem 0;
 }
@@ -133,6 +157,32 @@ button {
 
 .features-intro .features__card:last-of-type {
   margin-bottom: 0;
+}
+
+.featured .card .card__content {
+  padding: 4.8rem 0;
+}
+
+.featured .card .featured__title {
+  text-transform: uppercase;
+}
+
+.featured .card .featured__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.featured .card .featured__info .story__date {
+  margin-right: 0.8rem;
+  opacity: 0.75;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.featured .card .featured__info .story__author {
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .btn,
@@ -326,12 +376,12 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .showcase .card {
+  .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .showcase .card:nth-of-type(odd) {
+  .card:nth-of-type(odd) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -340,29 +390,29 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .showcase .card .card__image {
+  .card .card__image {
     width: 35.54%;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .showcase .card .card__image {
+  .card .card__image {
     width: 57.63%;
   }
 }
 
-.showcase .card .card__image img {
+.card .card__image img {
   width: 100%;
   display: block;
 }
 
-.showcase .card .card__content {
+.card .card__content {
   background: #fff;
   padding: 7.2rem 0;
 }
 
 @media screen and (min-width: 768px) {
-  .showcase .card .card__content {
+  .card .card__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -379,65 +429,45 @@ button {
 }
 
 @media screen and (min-width: 1440px) {
-  .showcase .card .card__content {
+  .card .card__content {
     width: 42.36%;
   }
 }
 
-.showcase .card .card__content.main-card {
+.card .card__content.main-card {
   background: #000;
   color: #fff;
   position: relative;
 }
 
-.showcase .card .card__content.main-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 24px;
-  width: 128px;
-  height: 6px;
-  background: -webkit-gradient(linear, left top, right top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
-  background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
+.card .card__content .container {
+  width: 84.8%;
 }
 
 @media screen and (min-width: 768px) {
-  .showcase .card .card__content.main-card::before {
-    width: 6px;
-    height: 304px;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
-    background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .showcase .card .card__content .container {
+  .card .card__content .container {
     width: 78.18%;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .showcase .card .card__content .container {
+  .card .card__content .container {
     width: 63.44%;
   }
 }
 
-.showcase .card .card__content .card__title {
+.card .card__content .card__title {
   text-transform: uppercase;
   margin: 0 0 1.6rem;
 }
 
-.showcase .card .card__content .card__tagline {
+.card .card__content .card__tagline {
   opacity: 0.6;
   margin: 0 0 2.3rem;
 }
 
 @media screen and (min-width: 768px) {
-  .showcase .card .card__content .card__tagline {
+  .card .card__content .card__tagline {
     margin-bottom: 4.8rem;
   }
 }

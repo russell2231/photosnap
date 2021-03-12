@@ -1,4 +1,4 @@
-.showcase .card {
+.card {
 	@include tablet {
 		display: flex;
 
@@ -42,28 +42,11 @@
 			background: #000;
 			color: #fff;
 			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 24px;
-				width: 128px;
-				height: 6px;
-				background: linear-gradient(to right, #ffc593, #bc7198, #5a77ff);
-
-				@include tablet {
-					width: 6px;
-					height: 304px;
-					top: 50%;
-					left: 0;
-					transform: translateY(-50%);
-					background: linear-gradient(to top, #ffc593, #bc7198, #5a77ff);
-				}
-			}
 		}
 
 		.container {
+			width: 84.8%;
+
 			@include tablet {
 				width: 78.18%;
 			}
