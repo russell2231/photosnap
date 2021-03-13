@@ -9,6 +9,14 @@
 		width: 31.53%;
 	}
 
+	.features__icon {
+		width: 72px;
+		height: 72px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.features__title {
 		margin: 4.8rem 0 1.6rem;
 	}

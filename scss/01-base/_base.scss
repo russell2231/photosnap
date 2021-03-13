@@ -31,6 +31,21 @@ button {
 	}
 }
 
+.grid-col-3 {
+	display: grid;
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 10px;
+		align-items: center;
+	}
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+		align-items: start;
+		row-gap: 104px;
+		column-gap: 30px;
+	}
+}
+
 .showcase .main-card::before {
 	content: '';
 	position: absolute;
@@ -145,7 +160,7 @@ button {
 	}
 }
 
-.features {
+.features-hero {
 	&.showcase .main-card::before {
 		@include tablet {
 			height: 144px;
@@ -154,5 +169,33 @@ button {
 
 	.card .card__content .card__tagline {
 		margin-bottom: 0;
+	}
+}
+
+.features {
+	padding: 6.4rem 0 9.1rem;
+
+	@include tablet {
+		padding: 11.2rem 0 5.6rem;
+	}
+	@include desktop {
+		padding: 16rem 0;
+	}
+
+	.features__card:last-of-type {
+		margin-bottom: 0;
+
+		@include tablet {
+			margin-bottom: 5.6rem;
+		}
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+
+	.features__card {
+		@include desktop {
+			width: 100%;
+		}
 	}
 }

@@ -96,6 +96,36 @@ button {
   }
 }
 
+.grid-col-3 {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-col-3 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-col-3 {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    row-gap: 104px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+
 .showcase .main-card::before {
   content: '';
   position: absolute;
@@ -230,13 +260,51 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .features.showcase .main-card::before {
+  .features-hero.showcase .main-card::before {
     height: 144px;
   }
 }
 
-.features .card .card__content .card__tagline {
+.features-hero .card .card__content .card__tagline {
   margin-bottom: 0;
+}
+
+.features {
+  padding: 6.4rem 0 9.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    padding: 11.2rem 0 5.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .features {
+    padding: 16rem 0;
+  }
+}
+
+.features .features__card:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .features .features__card:last-of-type {
+    margin-bottom: 5.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .features .features__card:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .features .features__card {
+    width: 100%;
+  }
 }
 
 .btn,
@@ -628,6 +696,21 @@ button {
     margin-bottom: 0;
     width: 31.53%;
   }
+}
+
+.features__card .features__icon {
+  width: 72px;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .features__card .features__title {
