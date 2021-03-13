@@ -229,6 +229,16 @@ button {
   letter-spacing: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .features.showcase .main-card::before {
+    height: 144px;
+  }
+}
+
+.features .card .card__content .card__tagline {
+  margin-bottom: 0;
+}
+
 .btn,
 .btn-arrow {
   font-size: 1.2rem;

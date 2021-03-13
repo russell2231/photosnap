@@ -144,3 +144,15 @@ button {
 		}
 	}
 }
+
+.features {
+	&.showcase .main-card::before {
+		@include tablet {
+			height: 144px;
+		}
+	}
+
+	.card .card__content .card__tagline {
+		margin-bottom: 0;
+	}
+}

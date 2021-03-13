@@ -5,8 +5,54 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>Photosnap | Features</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
+		<header class="main-header">
+			<nav class="container main-nav">
+				<a href="/" class="nav__brand">
+					<img src="assets/shared/desktop/logo.svg" alt="" />
+				</a>
+				<div class="nav__toggler"></div>
+				<ul class="list">
+					<li class="nav__item"><a href="stories.html">Stories</a></li>
+					<li class="nav__item"><a href="features.html">Features</a></li>
+					<li class="nav__item"><a href="pricing.html">Pricing</a></li>
+				</ul>
+				<button class="btn btn--dark">Get an invite</button>
+			</nav>
+		</header>
+
+		<main>
+			<section class="showcase features">
+				<div class="card">
+					<div class="card__image">
+						<picture>
+							<source
+								media="(min-width: 1440px)"
+								srcset="assets/features/desktop/hero.jpg"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/features/tablet/hero.jpg"
+							/>
+							<img src="assets/features/mobile/hero.jpg" alt="" />
+						</picture>
+					</div>
+					<div class="card__content main-card">
+						<div class="container">
+							<h1 class="card__title">Features</h1>
+							<p class="card__tagline">
+								We make sure all of our features are designed to be loved by
+								every aspiring and even professional photograpers who wanted to
+								share their stories.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 		Stories Features Pricing Get an invite Features We make sure all of our
 		features are designed to be loved by every aspiring and even professional
 		photograpers who wanted to share their stories. 100% Responsive No matter
