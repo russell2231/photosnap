@@ -307,6 +307,61 @@ button {
   }
 }
 
+.beta-showcase .card .card__content.main-card {
+  width: 100%;
+  background: url(../../assets/shared/mobile/bg-beta.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .beta-showcase .card .card__content.main-card {
+    background: url(../../assets/shared/tablet/bg-beta.jpg) no-repeat;
+    background-size: cover;
+    padding: 6.8rem 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .beta-showcase .card .card__content.main-card {
+    background: url(../../assets/shared/desktop/bg-beta.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .beta-showcase .card .card__content.main-card::before {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .beta-showcase .card .card__content.main-card .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 89.5%;
+  }
+  .beta-showcase .card .card__content.main-card .container .card__title {
+    width: 58.2%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .beta-showcase .card .card__content.main-card .container {
+    width: 77.08%;
+  }
+  .beta-showcase .card .card__content.main-card .container .card__title {
+    width: 36.03%;
+  }
+}
+
 .btn,
 .btn-arrow {
   font-size: 1.2rem;
@@ -563,7 +618,7 @@ button {
 }
 
 .card .card__content .container {
-  width: 84.8%;
+  width: 82.6%;
 }
 
 @media screen and (min-width: 768px) {
