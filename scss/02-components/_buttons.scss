@@ -35,6 +35,18 @@
 	}
 }
 
+.btn--light {
+	color: #000;
+	background: #fff;
+	padding: 1.2rem 2.4rem;
+	transition: background 0.3s;
+
+	&:hover {
+		background: #dfdfdf;
+		color: #000;
+	}
+}
+
 .btn-arrow--light {
 	color: #fff;
 

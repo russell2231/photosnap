@@ -250,4 +250,14 @@ button {
 
 .pricing-plans {
 	padding: 6.4rem 0;
+
+	.pricing-cards {
+		margin-top: 4rem;
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
 }
