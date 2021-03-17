@@ -5,8 +5,73 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>Photosnap | Pricing</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
+		<header class="main-header">
+			<nav class="container main-nav">
+				<a href="/" class="nav__brand">
+					<img src="assets/shared/desktop/logo.svg" alt="" />
+				</a>
+				<div class="nav__toggler"></div>
+				<ul class="list">
+					<li class="nav__item"><a href="stories.html">Stories</a></li>
+					<li class="nav__item"><a href="features.html">Features</a></li>
+					<li class="nav__item"><a href="pricing.html">Pricing</a></li>
+				</ul>
+				<button class="btn btn--dark">Get an invite</button>
+			</nav>
+		</header>
+
+		<main>
+			<section class="showcase pricing-hero">
+				<div class="card">
+					<div class="card__image">
+						<picture>
+							<source
+								media="(min-width: 1440px)"
+								srcset="assets/pricing/desktop/hero.jpg"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/pricing/tablet/hero.jpg"
+							/>
+							<img src="assets/pricing/mobile/hero.jpg" alt="" />
+						</picture>
+					</div>
+					<div class="card__content main-card">
+						<div class="container">
+							<h1 class="card__title">Pricing</h1>
+							<p class="card__tagline">
+								Create a your stories, Photosnap is a platform for photographers
+								and visual storytellers. It’s the simple way to create and share
+								your photos.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="pricing-plans">
+				<div class="container">
+					<div class="switch switch--horizontal">
+						<input
+							id="radio-a"
+							type="radio"
+							name="price-breakdown"
+							checked="checked"
+						/>
+						<label for="radio-a">Monthly</label>
+						<input id="radio-b" type="radio" name="price-breakdown" />
+						<label for="radio-b">Yearly</label
+						><span class="toggle-outside"
+							><span class="toggle-inside"></span
+						></span>
+					</div>
+				</div>
+			</section>
+		</main>
 		Stories Features Pricing Get an invite Pricing Create a your stories,
 		Photosnap is a platform for photographers and visual storytellers. It’s the
 		simple way to create and share your photos. Monthly Yearly Basic Includes

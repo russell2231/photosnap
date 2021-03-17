@@ -260,12 +260,14 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .features-hero.showcase .main-card::before {
+  .features-hero.showcase .main-card::before,
+  .pricing-hero.showcase .main-card::before {
     height: 144px;
   }
 }
 
-.features-hero .card .card__content .card__tagline {
+.features-hero .card .card__content .card__tagline,
+.pricing-hero .card .card__content .card__tagline {
   margin-bottom: 0;
 }
 
@@ -362,6 +364,10 @@ button {
   }
 }
 
+.pricing-plans {
+  padding: 6.4rem 0;
+}
+
 .btn,
 .btn-arrow {
   font-size: 1.2rem;
@@ -418,6 +424,115 @@ button {
 
 .btn-arrow--dark .arrow-icon g {
   stroke: #000;
+}
+
+.switch {
+  position: relative;
+}
+
+.switch input {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.switch input:checked {
+  z-index: 1;
+}
+
+.switch input:checked + label {
+  opacity: 1;
+  cursor: default;
+}
+
+.switch input:not(:checked) + label:hover {
+  opacity: 0.75;
+}
+
+.switch label {
+  color: #000;
+  font-weight: 700;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.switch .toggle-outside {
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.switch .toggle-inside {
+  border-radius: 100%;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.switch--horizontal {
+  width: 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 32px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.switch--horizontal input {
+  height: 32px;
+  width: 64px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  margin: 0;
+}
+
+.switch--horizontal label {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  height: 100%;
+  margin: 0;
+}
+
+.switch--horizontal .toggle-outside {
+  background: #dfdfdf;
+  position: absolute;
+  width: 64px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.switch--horizontal .toggle-inside {
+  height: 24px;
+  width: 24px;
+}
+
+.switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
+  left: 4px;
+}
+
+.switch--horizontal input ~ input:checked ~ .toggle-outside {
+  background: #000;
+}
+
+.switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
+  left: 36px;
+  background: #fff;
 }
 
 .main-header {
@@ -618,7 +733,7 @@ button {
 }
 
 .card .card__content .container {
-  width: 82.6%;
+  width: 84.8%;
 }
 
 @media screen and (min-width: 768px) {

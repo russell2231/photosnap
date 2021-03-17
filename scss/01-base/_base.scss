@@ -160,7 +160,8 @@ button {
 	}
 }
 
-.features-hero {
+.features-hero,
+.pricing-hero {
 	&.showcase .main-card::before {
 		@include tablet {
 			height: 144px;
@@ -245,4 +246,8 @@ button {
 			}
 		}
 	}
+}
+
+.pricing-plans {
+	padding: 6.4rem 0;
 }
