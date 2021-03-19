@@ -961,14 +961,19 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 31.53%;
     text-align: center;
+    margin-bottom: 0;
   }
+}
+
+.pricing-card:last-of-type {
+  margin-bottom: 0;
 }
 
 .pricing-card.featured {
@@ -1086,6 +1091,151 @@ button {
   .pricing-card .btn {
     width: 100%;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features {
+    padding: 4.8rem 0 11.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .plan-features {
+    padding: 9.6rem 0 16rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .plan-features .container {
+    width: 50.7%;
+  }
+}
+
+.plan-features .text--large {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .text--large {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.plan-features .plan-offers .plan-feature {
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan-feature {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding-left: 4.2rem;
+    padding-right: 4.2rem;
+  }
+}
+
+.plan-features .plan-offers .plan-feature.plan-feature__heading {
+  border-color: #000;
+}
+
+.plan-features .plan-offers .plan-feature.plan-feature__heading .plans-heading {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan-feature.plan-feature__heading .plans-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+  }
+}
+
+.plan-features .plan-offers .plan-feature.plan-feature__heading .plans-heading .plan__title {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan-feature.plan-feature__heading .plans-heading .plan__title {
+    text-transform: uppercase;
+  }
+}
+
+.plan-features .plan-offers .plan-feature__title {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan-feature__title {
+    width: 40%;
+  }
+}
+
+.plan-features .plan-offers .plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plans {
+    margin-top: 0;
+    width: 49.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.plan-features .plan-offers .plan h4 {
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .plan-features .plan-offers .plan h4 {
+    visibility: hidden;
+    height: 0;
   }
 }
 
