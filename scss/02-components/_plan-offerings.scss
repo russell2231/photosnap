@@ -40,6 +40,10 @@
 				padding-right: 4.2rem;
 			}
 
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
 			&.plan-feature__heading {
 				border-color: #000;
 

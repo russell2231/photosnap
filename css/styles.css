@@ -1152,6 +1152,10 @@ button {
   }
 }
 
+.plan-features .plan-offers .plan-feature:last-of-type {
+  margin-bottom: 0;
+}
+
 .plan-features .plan-offers .plan-feature.plan-feature__heading {
   border-color: #000;
 }
